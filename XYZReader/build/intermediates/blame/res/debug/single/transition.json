@@ -6,5 +6,9 @@
     {
         "merged": "C:\\AndroidStudioProjects\\Udacity\\xyzreader\\XYZReader\\build\\intermediates\\res\\merged\\debug\\transition\\fade_views.xml",
         "source": "C:\\AndroidStudioProjects\\Udacity\\xyzreader\\XYZReader\\src\\main\\res\\transition\\fade_views.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\Udacity\\xyzreader\\XYZReader\\build\\intermediates\\res\\merged\\debug\\transition\\explode_views.xml",
+        "source": "C:\\AndroidStudioProjects\\Udacity\\xyzreader\\XYZReader\\src\\main\\res\\transition\\explode_views.xml"
     }
 ]

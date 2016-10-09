@@ -1,6 +1,5 @@
 package com.example.xyzreader.ui;
 
-import android.annotation.TargetApi;
 import android.app.LoaderManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -8,30 +7,19 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.Loader;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Color;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.graphics.Palette;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.text.format.DateUtils;
-import android.transition.Fade;
-import android.transition.Slide;
-import android.transition.TransitionInflater;
 import android.util.Log;
-import android.util.TypedValue;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -40,9 +28,6 @@ import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
 import com.example.xyzreader.data.ItemsContract;
 import com.example.xyzreader.data.UpdaterService;
-
-import java.io.InputStream;
-import java.util.HashMap;
 
 /**
  * An activity representing a list of Articles. This activity has different presentations for
@@ -59,13 +44,12 @@ public class ArticleListActivity extends AppCompatActivity implements
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private RecyclerView mRecyclerView;
     private CoordinatorLayout coordinatorLayout;
+    private ViewGroup mRootView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article_list);
-        setupWindowAnimations();
-
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id.my_coordinatorlayout);
 
         mToolbar = (Toolbar) findViewById(R.id.my_toolbar);
@@ -92,17 +76,6 @@ public class ArticleListActivity extends AppCompatActivity implements
                 Snackbar.make(coordinatorLayout, "No Internet connection...", Snackbar.LENGTH_LONG).show();
             }
         }
-    }
-
-    @TargetApi(21)
-    private void setupWindowAnimations() {
-        Fade fade = new Fade();
-        fade.setDuration(1000);
-        getWindow().setEnterTransition(fade);
-
-        Slide slide = new Slide();
-        slide.setDuration(1000);
-        getWindow().setReturnTransition(slide);
     }
 
     private void refresh() {
@@ -163,7 +136,7 @@ public class ArticleListActivity extends AppCompatActivity implements
         mRecyclerView.setAdapter(null);
     }
 
-    private class Adapter extends RecyclerView.Adapter<ViewHolder> {
+    private class Adapter extends RecyclerView.Adapter<ViewHolder> implements View.OnClickListener {
         private Cursor mCursor;
 
         public Adapter(Cursor cursor) {
@@ -186,8 +159,22 @@ public class ArticleListActivity extends AppCompatActivity implements
                 public void onClick(View view) {
                     Log.d(LOG_TAG, "rkakadia image clicked");
 
-                    startActivity(new Intent(Intent.ACTION_VIEW,
-                            ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))));
+                    if (Build.VERSION.SDK_INT >= 21) {
+//                        com.example.xyzreader.ui.DynamicHeightNetworkImageView article_image =
+//                                (com.example.xyzreader.ui.DynamicHeightNetworkImageView) findViewById(R.id.thumbnail);
+//                        Intent intent = new Intent(Intent.ACTION_VIEW,
+//                                ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition())));
+//                        ActivityOptionsCompat options = ActivityOptionsCompat.
+//                                makeSceneTransitionAnimation(ArticleListActivity.this, article_image, "transition");
+//                        startActivity(intent, options.toBundle());
+
+                        startActivity(new Intent(Intent.ACTION_VIEW,
+                                ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))));
+
+                    } else {
+                        startActivity(new Intent(Intent.ACTION_VIEW,
+                                ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))));
+                    }
                 }
             });
             return vh;
@@ -196,6 +183,11 @@ public class ArticleListActivity extends AppCompatActivity implements
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
             mCursor.moveToPosition(position);
+
+//            if (Build.VERSION.SDK_INT >= 21) {
+//                holder.thumbnailView.setTransitionName("article_image" + position);
+//            }
+
             holder.titleView.setText(mCursor.getString(ArticleLoader.Query.TITLE));
             holder.subtitleView.setText(
                     DateUtils.getRelativeTimeSpanString(
@@ -213,6 +205,11 @@ public class ArticleListActivity extends AppCompatActivity implements
         @Override
         public int getItemCount() {
             return mCursor.getCount();
+        }
+
+        @Override
+        public void onClick(View v) {
+
         }
     }
 

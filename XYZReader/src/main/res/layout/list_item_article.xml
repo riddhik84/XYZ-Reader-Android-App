@@ -8,9 +8,11 @@
     android:layout_marginTop="4dp"
     android:clickable="true"
     android:focusable="true"
-    android:foreground="?selectableItemBackground">
+    android:foreground="?selectableItemBackground"
+    app:cardElevation="2dp">
 
     <LinearLayout
+        android:id="@+id/list_item_article_linear_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -20,37 +22,38 @@
             android:id="@+id/thumbnail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop"
             android:background="@color/photo_placeholder"
-            android:transitionName="transition"/>
+            android:scaleType="centerCrop"
+            android:transitionName="article_image"/>
 
         <TextView
             android:id="@+id/article_title"
-            style="@style/TextAppearance.AppCompat.Subhead"
+            style="@style/TextShadow1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/primary_brown"
             android:ellipsize="end"
-            android:maxLines="4"
+            android:maxLines="3"
             android:paddingBottom="4dp"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:paddingTop="16dp"
-            android:textColor="@color/ltgray"
-            android:background="@color/primary_brown"/>
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/article_subtitle"
-            style="@style/TextAppearance.AppCompat.Body1"
+            style="@style/TextShadow2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/primary_brown"
             android:ellipsize="end"
-            android:maxLines="1"
+            android:maxLines="2"
             android:paddingBottom="16dp"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:singleLine="true"
-            android:textColor="#6000"
-            android:background="@color/primary_brown"/>
+            android:textColor="@color/colorWhite" />
     </LinearLayout>
 
 </android.support.v7.widget.CardView>

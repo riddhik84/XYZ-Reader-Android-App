@@ -66,7 +66,7 @@
     <color name="material_grey_800">#ff424242</color>
     <color name="material_grey_850">#ff303030</color>
     <color name="material_grey_900">#ff212121</color>
-    <color name="photo_placeholder">#ccc</color>
+    <color name="photo_placeholder">#8ccc</color>
     <color name="primary_accent_pink">#FF4081</color>
     <color name="primary_brown">#795548</color>
     <color name="primary_brown_dark">#5D4037</color>
@@ -469,7 +469,13 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <dimen name="article_byline_text_size">12sp</dimen>
+    <dimen name="article_body_padding_left">16dp</dimen>
+    <dimen name="article_body_padding_right">16dp</dimen>
+    <dimen name="article_byline_padding_left">16dp</dimen>
+    <dimen name="article_byline_padding_right">16dp</dimen>
+    <dimen name="article_byline_text_size">14sp</dimen>
+    <dimen name="article_detail_collapsed_header_textsize">20sp</dimen>
+    <dimen name="article_detail_header_textsize">20sp</dimen>
     <dimen name="article_list_margin_bottom">28dp</dimen>
     <dimen name="article_title_text_size">20sp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
@@ -523,6 +529,7 @@
     <dimen name="detail_title_text_size">32sp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <dimen name="expanded_toolbar_title_padding_left">16dp</dimen>
     <dimen name="fab_elevation">2dp</dimen>
     <dimen name="fab_margin">24dp</dimen>
     <dimen name="fab_press_translation_z">6dp</dimen>
@@ -1648,10 +1655,21 @@
     <style name="CardView.Light">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
     </style>
-    <style name="ExpandedTitleTextAppearance" parent="android:style/TextAppearance.Medium">
-        <item name="android:textSize">20sp</item>
-        <item name="android:background">@color/primary_brown</item>
+    <style name="CollapsedTitleTextAppearance" parent="@style/AppThemeToolbar">
+        <item name="android:textSize">@dimen/article_detail_collapsed_header_textsize</item>
+        <item name="android:shadowColor">#000</item>
+        <item name="android:shadowDx">5</item>
+        <item name="android:shadowDy">5</item>
+        <item name="android:shadowRadius">20</item>
+    </style>
+    <style name="ExpandedTitleTextAppearance" parent="@style/AppThemeToolbar">
+        <item name="android:textSize">@dimen/article_detail_header_textsize</item>
+        <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000</item>
+        <item name="android:shadowDx">5</item>
+        <item name="android:shadowDy">5</item>
+        <item name="android:shadowRadius">20</item>
     </style>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
@@ -1890,6 +1908,18 @@
     <style name="TextAppearance.Widget.AppCompat.Toolbar.Subtitle" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
     </style>
     <style name="TextAppearance.Widget.AppCompat.Toolbar.Title" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Title">
+    </style>
+    <style name="TextShadow1" parent="@style/TextAppearance.AppCompat.Subhead">
+        <item name="android:shadowColor">#000</item>
+        <item name="android:shadowDx">5</item>
+        <item name="android:shadowDy">5</item>
+        <item name="android:shadowRadius">20</item>
+    </style>
+    <style name="TextShadow2" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:shadowColor">#000</item>
+        <item name="android:shadowDx">5</item>
+        <item name="android:shadowDy">5</item>
+        <item name="android:shadowRadius">20</item>
     </style>
     <style name="Theme.AppCompat" parent="Base.Theme.AppCompat"/>
     <style name="Theme.AppCompat.CompactMenu" parent="Base.Theme.AppCompat.CompactMenu"/>

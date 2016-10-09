@@ -8,6 +8,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.ShareCompat;
@@ -47,6 +48,8 @@ public class ArticleDetailFragment extends Fragment implements
 
     private CollapsingToolbarLayout mCollapsingToolbarLayout;
     private Toolbar mToolbar;
+    //private static final String ARG_POSITION = "transition_string_position";
+    //private int mPosition;
 
     final private int default_color = 0x000000;
 
@@ -72,6 +75,9 @@ public class ArticleDetailFragment extends Fragment implements
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             mItemId = getArguments().getLong(ARG_ITEM_ID);
         }
+//        if (getArguments().containsKey(ARG_POSITION)) {
+//            mPosition = getArguments().getInt(ARG_POSITION);
+//        }
 
         setHasOptionsMenu(true);
 
@@ -98,6 +104,10 @@ public class ArticleDetailFragment extends Fragment implements
         mRootView = inflater.inflate(R.layout.fragment_article_detail, container, false);
 
         mArticleImage = (ImageView) mRootView.findViewById(R.id.article_image);
+//        if (Build.VERSION.SDK_INT >= 21) {
+//            mArticleImage.setTransitionName("article_image" + String.valueOf(mPosition));
+//        }
+
         mCollapsingToolbarLayout = (CollapsingToolbarLayout) mRootView.findViewById(R.id.collapsing_toolbar);
         mToolbar = (Toolbar) mRootView.findViewById(R.id.toolbar);
         getActivityCast().setSupportActionBar(mToolbar);
@@ -131,20 +141,24 @@ public class ArticleDetailFragment extends Fragment implements
         TextView bodyView = (TextView) mRootView.findViewById(R.id.article_body);
         bodyView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Rosario-Regular.ttf"));
 
-        TextView bylineView = (TextView) mRootView.findViewById(R.id.article_byline);
+        final TextView bylineView = (TextView) mRootView.findViewById(R.id.article_byline);
         bylineView.setMovementMethod(new LinkMovementMethod());
 
         //TextView articleTitle = (TextView) mRootView.findViewById(R.id.article_title);
 
         if (mCursor != null) {
-            //mRootView.setAlpha(0);
+            Log.d(LOG_TAG, "rkakadia cursor != null");
+
+            mRootView.setAlpha(0);
             mRootView.setVisibility(View.VISIBLE);
-            //mRootView.animate().alpha(1);
+            mRootView.animate().alpha(1);
 
             mCollapsingToolbarLayout.setTitle(mCursor.getString(ArticleLoader.Query.TITLE));
-            mCollapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(R.color.colorWhite));
+            //mCollapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(R.color.colorWhite));
             mCollapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(R.color.colorWhite));
             mCollapsingToolbarLayout.setExpandedTitleTextAppearance(R.style.ExpandedTitleTextAppearance);
+            mCollapsingToolbarLayout.setCollapsedTitleTextAppearance(R.style.CollapsedTitleTextAppearance);
+
             //articleTitle.setText(mCursor.getString(ArticleLoader.Query.TITLE));
             //articleTitle.getBackground().setAlpha(250);
 
@@ -153,9 +167,8 @@ public class ArticleDetailFragment extends Fragment implements
                             mCursor.getLong(ArticleLoader.Query.PUBLISHED_DATE),
                             System.currentTimeMillis(), DateUtils.HOUR_IN_MILLIS,
                             DateUtils.FORMAT_ABBREV_ALL).toString()
-                            + " by <font color='#00000'>"
-                            + mCursor.getString(ArticleLoader.Query.AUTHOR)
-                            + "</font>"));
+                            + " by "
+                            + mCursor.getString(ArticleLoader.Query.AUTHOR)));
 
             bodyView.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY)));
 
@@ -163,6 +176,8 @@ public class ArticleDetailFragment extends Fragment implements
                     .load(mCursor.getString(ArticleLoader.Query.PHOTO_URL))
                     .placeholder(R.drawable.photo_background_protection)
                     .fit()
+                    //.centerCrop()
+                    .noFade()
                     .error(R.drawable.empty_detail)
                     .into(mArticleImage, new Callback() {
                         @Override
@@ -174,6 +189,8 @@ public class ArticleDetailFragment extends Fragment implements
                                     public void onGenerated(Palette palette) {
                                         mCollapsingToolbarLayout.setContentScrimColor(palette.getMutedColor(default_color));
                                         mCollapsingToolbarLayout.setStatusBarScrimColor(palette.getDarkMutedColor(default_color));
+
+                                        bylineView.setBackgroundColor(palette.getMutedColor(default_color));
                                     }
                                 });
                             }
