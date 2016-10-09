@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorPrimary">@color/primary_brown</item>
+        <item name="android:colorPrimaryDark">@color/primary_brown_dark</item>
+        <item name="android:colorAccent">@color/primary_accent_pink</item>
+
+        <item name="android:toolbarStyle">@style/AppThemeToolbar</item>
+
+    </style>
+
+    <style name="AppThemeToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="background">@color/primary_brown</item>
+        <item name="popupTheme">@style/Theme.AppCompat.Light</item>
+    </style>
+
+    <style name="ExpandedTitleTextAppearance" parent="android:style/TextAppearance.Medium">
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@color/primary_brown</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

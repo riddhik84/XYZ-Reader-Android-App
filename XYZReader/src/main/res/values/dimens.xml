@@ -1,0 +1,21 @@
+<resources>
+    <!-- detail -->
+    <dimen name="detail_title_text_size">32sp</dimen>
+    <item name="detail_body_line_spacing_multiplier" format="float" type="fraction">1.25</item>
+
+    <dimen name="fab_elevation">2dp</dimen>
+    <dimen name="fab_press_translation_z">6dp</dimen>
+    <dimen name="fab_margin">24dp</dimen>
+
+    <!-- Material Design -->
+    <dimen name="detail_appbar_layout_height">200dp</dimen>
+    <dimen name="article_byline_text_size">12sp</dimen>
+    <dimen name="article_title_text_size">20sp</dimen>
+    <dimen name="detail_body_text_size">18sp</dimen>
+
+    <dimen name="logo_image_margin_left">10dp</dimen>
+    <dimen name="list_view_appbarlayout_layout_height">112dp</dimen>
+    <dimen name="article_list_margin_bottom">28dp</dimen>
+
+
+</resources>

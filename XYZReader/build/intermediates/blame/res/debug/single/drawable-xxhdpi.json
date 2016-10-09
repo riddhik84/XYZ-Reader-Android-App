@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\AndroidStudioProjects\\Udacity\\xyzreader\\XYZReader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_arrow_back.png",
+        "source": "C:\\AndroidStudioProjects\\Udacity\\xyzreader\\XYZReader\\src\\main\\res\\drawable-xxhdpi\\ic_arrow_back.png"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\Udacity\\xyzreader\\XYZReader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\share_icon.png",
+        "source": "C:\\AndroidStudioProjects\\Udacity\\xyzreader\\XYZReader\\src\\main\\res\\drawable-xxhdpi\\share_icon.png"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\Udacity\\xyzreader\\XYZReader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\logo.png",
+        "source": "C:\\AndroidStudioProjects\\Udacity\\xyzreader\\XYZReader\\src\\main\\res\\drawable-xxhdpi\\logo.png"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\Udacity\\xyzreader\\XYZReader\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_share.png",
+        "source": "C:\\AndroidStudioProjects\\Udacity\\xyzreader\\XYZReader\\src\\main\\res\\drawable-xxhdpi\\ic_share.png"
+    }
+]
