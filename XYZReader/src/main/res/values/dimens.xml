@@ -8,7 +8,7 @@
     <dimen name="fab_margin">24dp</dimen>
 
     <!-- Material Design -->
-    <dimen name="detail_appbar_layout_height">200dp</dimen>
+    <dimen name="detail_appbar_layout_height">220dp</dimen>
     <dimen name="article_title_text_size">20sp</dimen>
 
     <dimen name="logo_image_margin_left">10dp</dimen>

@@ -12,6 +12,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.ShareCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
@@ -22,6 +23,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -187,10 +190,21 @@ public class ArticleDetailFragment extends Fragment implements
                                 Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
                                     @Override
                                     public void onGenerated(Palette palette) {
-                                        mCollapsingToolbarLayout.setContentScrimColor(palette.getMutedColor(default_color));
-                                        mCollapsingToolbarLayout.setStatusBarScrimColor(palette.getDarkMutedColor(default_color));
+                                        int mutedColor = palette.getMutedColor(default_color);
+                                        int darkMutedColor = palette.getDarkMutedColor(mutedColor);
 
-                                        bylineView.setBackgroundColor(palette.getMutedColor(default_color));
+                                        mCollapsingToolbarLayout.setContentScrimColor(mutedColor);
+                                        //mCollapsingToolbarLayout.setStatusBarScrimColor(palette.getDarkMutedColor(default_color));
+
+                                        //Change color for status bar
+                                        Window window = getActivityCast().getWindow();
+                                        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+                                        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+                                        if (Build.VERSION.SDK_INT >= 21) {
+                                            window.setStatusBarColor(darkMutedColor);
+                                        }
+
+                                        bylineView.setBackgroundColor(mutedColor);
                                     }
                                 });
                             }

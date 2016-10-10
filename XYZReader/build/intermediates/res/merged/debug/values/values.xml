@@ -516,7 +516,7 @@
     <dimen name="design_tab_scrollable_min_width">72dp</dimen>
     <dimen name="design_tab_text_size">14sp</dimen>
     <dimen name="design_tab_text_size_2line">12sp</dimen>
-    <dimen name="detail_appbar_layout_height">200dp</dimen>
+    <dimen name="detail_appbar_layout_height">220dp</dimen>
     <dimen name="detail_body_bottom_margin">88dp</dimen>
     <dimen name="detail_body_text_size">18sp</dimen>
     <dimen name="detail_body_top_margin">16dp</dimen>

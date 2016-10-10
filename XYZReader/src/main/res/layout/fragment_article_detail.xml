@@ -22,7 +22,7 @@
             app:collapsedTitleGravity="center_horizontal"
             app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
             app:expandedTitleGravity="bottom"
-            app:expandedTitleMarginBottom="15dp"
+            app:expandedTitleMarginBottom="28dp"
             app:expandedTitleMarginStart="@dimen/expanded_toolbar_title_padding_left"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
@@ -50,11 +50,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="fill_vertical"
+        app:behavior_overlapTop="20dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:orientation="vertical"
             app:layout_scrollFlags="scroll|enterAlways">
 

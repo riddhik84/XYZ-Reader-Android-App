@@ -1,14 +1,14 @@
 [
     {
-        "merged": "C:\\AndroidStudioProjects\\Udacity\\xyzreader\\XYZReader\\build\\intermediates\\res\\merged\\debug\\transition\\slide_views.xml",
-        "source": "C:\\AndroidStudioProjects\\Udacity\\xyzreader\\XYZReader\\src\\main\\res\\transition\\slide_views.xml"
+        "merged": "C:\\AndroidStudioProjects\\P5\\XYZ-Reader-Android-App\\XYZReader\\build\\intermediates\\res\\merged\\debug\\transition\\slide_views.xml",
+        "source": "C:\\AndroidStudioProjects\\P5\\XYZ-Reader-Android-App\\XYZReader\\src\\main\\res\\transition\\slide_views.xml"
     },
     {
-        "merged": "C:\\AndroidStudioProjects\\Udacity\\xyzreader\\XYZReader\\build\\intermediates\\res\\merged\\debug\\transition\\fade_views.xml",
-        "source": "C:\\AndroidStudioProjects\\Udacity\\xyzreader\\XYZReader\\src\\main\\res\\transition\\fade_views.xml"
+        "merged": "C:\\AndroidStudioProjects\\P5\\XYZ-Reader-Android-App\\XYZReader\\build\\intermediates\\res\\merged\\debug\\transition\\fade_views.xml",
+        "source": "C:\\AndroidStudioProjects\\P5\\XYZ-Reader-Android-App\\XYZReader\\src\\main\\res\\transition\\fade_views.xml"
     },
     {
-        "merged": "C:\\AndroidStudioProjects\\Udacity\\xyzreader\\XYZReader\\build\\intermediates\\res\\merged\\debug\\transition\\explode_views.xml",
-        "source": "C:\\AndroidStudioProjects\\Udacity\\xyzreader\\XYZReader\\src\\main\\res\\transition\\explode_views.xml"
+        "merged": "C:\\AndroidStudioProjects\\P5\\XYZ-Reader-Android-App\\XYZReader\\build\\intermediates\\res\\merged\\debug\\transition\\explode_views.xml",
+        "source": "C:\\AndroidStudioProjects\\P5\\XYZ-Reader-Android-App\\XYZReader\\src\\main\\res\\transition\\explode_views.xml"
     }
 ]
