@@ -22,7 +22,7 @@
             app:collapsedTitleGravity="center_horizontal"
             app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
             app:expandedTitleGravity="bottom"
-            app:expandedTitleMarginBottom="28dp"
+            app:expandedTitleMarginBottom="@dimen/expanded_title_margin_bottom"
             app:expandedTitleMarginStart="@dimen/expanded_toolbar_title_padding_left"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
@@ -30,7 +30,6 @@
                 android:id="@+id/article_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:transitionName="article_image"
                 app:layout_collapseMode="parallax" />
 
             <android.support.v7.widget.Toolbar
@@ -38,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="@android:color/transparent"
-                app:contentInsetStart="50dp"
+                app:contentInsetStart="@dimen/detail_screen_toolbar_contentInsetStart"
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
@@ -50,14 +49,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="fill_vertical"
-        app:behavior_overlapTop="20dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
             android:orientation="vertical"
             app:layout_scrollFlags="scroll|enterAlways">
 

@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="article_body_padding_left">24dp</dimen>
+    <dimen name="article_body_padding_right">24dp</dimen>
+    <dimen name="article_byline_padding_left">24dp</dimen>
+    <dimen name="article_byline_padding_right">24dp</dimen>
+    <dimen name="article_byline_text_size">20sp</dimen>
+    <dimen name="article_detail_collapsed_header_textsize">25sp</dimen>
+    <dimen name="article_detail_header_textsize">35sp</dimen>
+    <dimen name="detail_appbar_layout_height">400dp</dimen>
+    <dimen name="detail_body_text_size">20sp</dimen>
+    <dimen name="detail_card_layout_margin_left">72dp</dimen>
+    <dimen name="detail_card_layout_margin_right">72dp</dimen>
     <dimen name="detail_card_max_width">704dp</dimen>
+    <dimen name="detail_title_text_size">42sp</dimen>
+    <dimen name="expanded_toolbar_title_padding_left">96dp</dimen>
+    <dimen name="fab_margin">24dp</dimen>
     <dimen name="list_side_margin">64dp</dimen>
     <dimen name="list_toolbar_side_margin">52dp</dimen>
+    <dimen name="list_view_appbarlayout_layout_height">150dp</dimen>
+    <dimen name="logo_image_padding_bottom">10dp</dimen>
+    <item format="float" name="detail_body_line_spacing_multiplier" type="fraction">1.3</item>
     <integer name="list_column_count">3</integer>
 </resources>

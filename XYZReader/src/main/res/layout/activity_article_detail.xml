@@ -16,12 +16,12 @@
 
         <ImageButton
             android:id="@+id/action_up"
-            android:layout_width="56dp"
+            android:layout_width="@dimen/action_up_button_layout_width"
             android:layout_height="?actionBarSize"
             android:background="?selectableItemBackgroundBorderless"
             android:contentDescription="@string/up"
-            android:paddingBottom="15dp"
-            android:paddingTop="15dp"
+            android:paddingBottom="@dimen/action_up_button_padding"
+            android:paddingTop="@dimen/action_up_button_padding"
             android:src="@drawable/ic_arrow_back"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
     </FrameLayout>

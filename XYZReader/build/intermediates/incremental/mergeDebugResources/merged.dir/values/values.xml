@@ -469,6 +469,8 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
+    <dimen name="action_up_button_layout_width">56dp</dimen>
+    <dimen name="action_up_button_padding">15dp</dimen>
     <dimen name="article_body_padding_left">16dp</dimen>
     <dimen name="article_body_padding_right">16dp</dimen>
     <dimen name="article_byline_padding_left">16dp</dimen>
@@ -526,9 +528,13 @@
     <dimen name="detail_metabar_title_bottom_padding">4dp</dimen>
     <dimen name="detail_metabar_vert_padding">16dp</dimen>
     <dimen name="detail_photo_height">304dp</dimen>
+    <dimen name="detail_screen_behavior_overlapTop">60dp</dimen>
+    <dimen name="detail_screen_expanded_title_margin_bottom">70dp</dimen>
+    <dimen name="detail_screen_toolbar_contentInsetStart">50dp</dimen>
     <dimen name="detail_title_text_size">32sp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <dimen name="expanded_title_margin_bottom">16dp</dimen>
     <dimen name="expanded_toolbar_title_padding_left">16dp</dimen>
     <dimen name="fab_elevation">2dp</dimen>
     <dimen name="fab_margin">24dp</dimen>
@@ -539,13 +545,16 @@
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
+    <dimen name="list_item_article_cardview_layout_margin">4dp</dimen>
     <dimen name="list_side_margin">4dp</dimen>
     <dimen name="list_toolbar_side_margin">0dp</dimen>
     <dimen name="list_view_appbarlayout_layout_height">112dp</dimen>
-    <dimen name="logo_image_margin_left">10dp</dimen>
+    <dimen name="logo_image_padding_bottom">10dp</dimen>
+    <dimen name="logo_image_padding_top">4dp</dimen>
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
+    <dimen name="swipe_refresh_layout_margin_top">5dp</dimen>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <item format="float" name="detail_body_line_spacing_multiplier" type="fraction">1.25</item>
     <item name="action_bar_activity_content" type="id"/>
@@ -624,6 +633,12 @@
         <item name="colorAccent">@color/primary_accent_pink</item>
 
         <item name="toolbarStyle">@style/AppThemeToolbar</item>
+    </style>
+    <style name="AppTheme.DetailCardShadow">
+        <item name="android:shadowColor">#000</item>
+        <item name="android:shadowDx">5</item>
+        <item name="android:shadowDy">5</item>
+        <item name="android:shadowRadius">30</item>
     </style>
     <style name="AppThemeToolbar" parent="Widget.AppCompat.Toolbar">
         <item name="background">@color/primary_brown</item>
@@ -1666,6 +1681,8 @@
         <item name="android:textSize">@dimen/article_detail_header_textsize</item>
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">@dimen/detail_card_layout_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/detail_card_layout_margin_right</item>
         <item name="android:shadowColor">#000</item>
         <item name="android:shadowDx">5</item>
         <item name="android:shadowDy">5</item>

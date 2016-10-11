@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
@@ -191,17 +192,19 @@ public class ArticleDetailFragment extends Fragment implements
                                     @Override
                                     public void onGenerated(Palette palette) {
                                         int mutedColor = palette.getMutedColor(default_color);
-                                        int darkMutedColor = palette.getDarkMutedColor(mutedColor);
+                                        int darkMutedColor = palette.getDarkMutedColor(default_color);
 
                                         mCollapsingToolbarLayout.setContentScrimColor(mutedColor);
-                                        //mCollapsingToolbarLayout.setStatusBarScrimColor(palette.getDarkMutedColor(default_color));
+                                        //mCollapsingToolbarLayout.setStatusBarScrimColor(darkMutedColor);
 
                                         //Change color for status bar
                                         Window window = getActivityCast().getWindow();
                                         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
                                         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
                                         if (Build.VERSION.SDK_INT >= 21) {
-                                            window.setStatusBarColor(darkMutedColor);
+                                            //Setting darker shade on statusbar
+                                            //int statusBarDarkColor = Utility.darken(mutedColor, 1.0);
+                                            //window.setStatusBarColor(statusBarDarkColor);
                                         }
 
                                         bylineView.setBackgroundColor(mutedColor);

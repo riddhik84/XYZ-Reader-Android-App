@@ -19,16 +19,18 @@
             android:layout_height="match_parent"
             android:background="@color/primary_brown"
             android:fitsSystemWindows="true"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:collapsedTitleGravity="bottom">
 
             <ImageView
                 android:id="@+id/logo_image"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:layout_marginLeft="@dimen/logo_image_margin_left"
                 android:contentDescription="@string/app_name"
-                android:src="@drawable/logo" />
+                android:src="@drawable/logo"
+                android:paddingBottom="@dimen/logo_image_padding_bottom"
+                android:paddingTop="@dimen/logo_image_padding_top"/>
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/my_toolbar"
@@ -48,7 +50,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginTop="@dimen/swipe_refresh_layout_margin_top">
 
         <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"

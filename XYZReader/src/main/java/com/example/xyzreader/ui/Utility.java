@@ -1,6 +1,7 @@
 package com.example.xyzreader.ui;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
@@ -21,6 +22,22 @@ public class Utility {
                 activeNetwork.isConnectedOrConnecting();
 
         return isConnected;
+    }
+
+    public static int darken(int color, double fraction) {
+        int red = Color.red(color);
+        int green = Color.green(color);
+        int blue = Color.blue(color);
+        red = darkenColor(red, fraction);
+        green = darkenColor(green, fraction);
+        blue = darkenColor(blue, fraction);
+        int alpha = Color.alpha(color);
+
+        return Color.argb(alpha, red, green, blue);
+    }
+
+    private static int darkenColor(int color, double fraction) {
+        return (int) Math.max(color - (color * fraction), 0);
     }
 }
 

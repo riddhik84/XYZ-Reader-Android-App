@@ -1,0 +1,33 @@
+<resources>
+    <!-- detail -->
+    <dimen name="detail_title_text_size">42sp</dimen>
+    <item name="detail_body_line_spacing_multiplier" format="float" type="fraction">1.3</item>
+    <dimen name="fab_margin">24dp</dimen>
+
+    <!-- Material design -->
+    <dimen name="list_view_appbarlayout_layout_height">150dp</dimen>
+    <dimen name="logo_image_padding_bottom">10dp</dimen>
+
+    <dimen name="detail_appbar_layout_height">300dp</dimen>
+    <dimen name="detail_screen_behavior_overlapTop">150dp</dimen>
+    <dimen name="detail_screen_expanded_title_margin_bottom">160dp</dimen>
+
+    <dimen name="article_detail_header_textsize">30sp</dimen>
+    <dimen name="article_detail_collapsed_header_textsize">25sp</dimen>
+
+    <dimen name="article_byline_text_size">18sp</dimen>
+    <dimen name="detail_body_text_size">18sp</dimen>
+
+    <dimen name="article_byline_padding_left">24dp</dimen>
+    <dimen name="article_byline_padding_right">24dp</dimen>
+
+    <dimen name="expanded_toolbar_title_padding_left">72dp</dimen>
+
+    <dimen name="article_body_padding_left">24dp</dimen>
+    <dimen name="article_body_padding_right">24dp</dimen>
+
+    <dimen name="detail_card_layout_margin_left">48dp</dimen>
+    <dimen name="detail_card_layout_margin_right">48dp</dimen>
+
+
+</resources>

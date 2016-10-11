@@ -8,11 +8,21 @@
     <dimen name="fab_margin">24dp</dimen>
 
     <!-- Material Design -->
+    <dimen name="list_view_appbarlayout_layout_height">112dp</dimen>
+    <dimen name="logo_image_padding_bottom">10dp</dimen>
+    <dimen name="logo_image_padding_top">4dp</dimen>
+    <dimen name="swipe_refresh_layout_margin_top">5dp</dimen>
+    <dimen name="list_item_article_cardview_layout_margin">4dp</dimen>
+
+    <dimen name="action_up_button_layout_width">56dp</dimen>
+    <dimen name="action_up_button_padding">15dp</dimen>
+
+    <dimen name="expanded_title_margin_bottom">16dp</dimen>
+    <dimen name="detail_screen_toolbar_contentInsetStart">50dp</dimen>
+
     <dimen name="detail_appbar_layout_height">220dp</dimen>
     <dimen name="article_title_text_size">20sp</dimen>
 
-    <dimen name="logo_image_margin_left">10dp</dimen>
-    <dimen name="list_view_appbarlayout_layout_height">112dp</dimen>
     <dimen name="article_list_margin_bottom">28dp</dimen>
 
     <dimen name="article_detail_header_textsize">20sp</dimen>
@@ -26,6 +36,10 @@
     <dimen name="expanded_toolbar_title_padding_left">16dp</dimen>
     <dimen name="article_body_padding_left">16dp</dimen>
     <dimen name="article_body_padding_right">16dp</dimen>
+
+    <dimen name="detail_screen_behavior_overlapTop">60dp</dimen>
+
+    <dimen name="detail_screen_expanded_title_margin_bottom">70dp</dimen>
 
 
 </resources>

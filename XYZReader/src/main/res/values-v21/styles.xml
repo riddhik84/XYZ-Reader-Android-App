@@ -28,6 +28,7 @@
         <item name="android:shadowDx">5</item>
         <item name="android:shadowDy">5</item>
         <item name="android:shadowRadius">20</item>
+        <item name="android:maxLines">2</item>
     </style>
 
     <style name="CollapsedTitleTextAppearance" parent="@style/AppThemeToolbar">
@@ -50,6 +51,13 @@
         <item name="android:shadowDx">5</item>
         <item name="android:shadowDy">5</item>
         <item name="android:shadowRadius">20</item>
+    </style>
+
+    <style name="AppTheme.DetailCardShadow">
+        <item name="android:shadowColor">#000</item>
+        <item name="android:shadowDx">5</item>
+        <item name="android:shadowDy">5</item>
+        <item name="android:shadowRadius">30</item>
     </style>
 
 </resources>

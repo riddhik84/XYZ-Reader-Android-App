@@ -5,9 +5,10 @@
     <dimen name="fab_margin">24dp</dimen>
 
     <!-- Material design -->
-    <dimen name="logo_image_margin_left">30dp</dimen>
     <dimen name="list_view_appbarlayout_layout_height">150dp</dimen>
-    <dimen name="detail_appbar_layout_height">360dp</dimen>
+    <dimen name="logo_image_padding_bottom">10dp</dimen>
+
+    <dimen name="detail_appbar_layout_height">400dp</dimen>
 
     <dimen name="article_detail_header_textsize">35sp</dimen>
     <dimen name="article_detail_collapsed_header_textsize">25sp</dimen>
@@ -15,11 +16,15 @@
     <dimen name="article_byline_text_size">20sp</dimen>
     <dimen name="detail_body_text_size">20sp</dimen>
 
-    <dimen name="article_byline_padding_left">48dp</dimen>
-    <dimen name="article_byline_padding_right">48dp</dimen>
-    <dimen name="expanded_toolbar_title_padding_left">48dp</dimen>
-    <dimen name="article_body_padding_left">48dp</dimen>
-    <dimen name="article_body_padding_right">48dp</dimen>
+    <dimen name="article_byline_padding_left">24dp</dimen>
+    <dimen name="article_byline_padding_right">24dp</dimen>
 
+    <dimen name="expanded_toolbar_title_padding_left">96dp</dimen>
+
+    <dimen name="article_body_padding_left">24dp</dimen>
+    <dimen name="article_body_padding_right">24dp</dimen>
+
+    <dimen name="detail_card_layout_margin_left">72dp</dimen>
+    <dimen name="detail_card_layout_margin_right">72dp</dimen>
 
 </resources>
