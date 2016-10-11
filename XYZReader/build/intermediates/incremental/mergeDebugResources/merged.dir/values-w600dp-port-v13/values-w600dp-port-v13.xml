@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="detail_appbar_layout_height">340dp</dimen>
-    <dimen name="detail_screen_behavior_overlapTop">100dp</dimen>
-    <dimen name="detail_screen_expanded_title_margin_bottom">110dp</dimen>
-</resources>
